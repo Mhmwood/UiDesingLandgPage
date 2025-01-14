@@ -1,0 +1,28 @@
+.bgimgAbout {
+  background-image: url("/src/assets/designs/girl1.svg");
+
+  height: 471px;
+  background-repeat: no-repeat;
+}
+
+ .bgimgWork {
+  background-image: url("../assets/designs/bgCircle.png") ;
+ background-blend-mode: overlay ;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} 
+
+
+.blurCircle {
+
+position: absolute;
+
+width: 50%;
+height: 50vh;
+background: radial-gradient(59.4% 59.4% at 46.5% 58.5%, rgba(41, 84, 163, 0.6) 0%, rgba(15, 16, 63, 0.6) 100%) ;
+filter: blur(100px);
+
+} 
+
