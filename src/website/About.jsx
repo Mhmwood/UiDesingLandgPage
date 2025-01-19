@@ -4,8 +4,8 @@ const About = () => {
   return (
     <Section id={"About"} padding="lg:py-48 md:py-20 py-0">
       <div className="  flex justify-center   lg:px-48  md:px-12  ">
-        <div className=" scale-[0.7] md:scale-125 ">
-          <div className=" bgimgAbout   w-[530px] sm:w-[557px] scale-125    ">
+        <div className=" scale-[0.5] md:scale-125 ">
+          <div className=" bgimgAbout  w-[530px] sm:w-[557px] scale-125    ">
             <div className="  h-full flex flex-col justify-center pl-[15.4rem] pb-7     ">
               <h5 className="font-bold  text-sm mb-2 ">About me</h5>
               <p className="text-[0.5rem] leading-tight  font-light w-[7.5rem] transform origin-left  scale-110 ">
