@@ -11,20 +11,50 @@ import {
   work,
   youtube,
 } from "../assets";
+import { motion } from "framer-motion";
 
 /* Menu */
 
 /* Auto layout */
 
 const Footer = () => {
+  const variants = (delay, rotate, y) => ({
+    visible: {
+      y: [0, y, 0],
+      rotate: [-rotate, rotate],
+      transformOrigin: " -50px 0 ",
+
+      transition: {
+        rotate: { duration: 6, repeat: Infinity, repeatType: "mirror" },
+        duration: 2,
+
+        repeat: Infinity,
+        repeatType: "loop",
+        ease: "easeInOut",
+        delay: delay,
+      },
+    },
+  });
   return (
     <footer className="  relative bg-purple-950  z-20">
       <div className="hidden absolute lg:flex bottom-20 lg:scale-[0.] xl:scale-[0.7] transform translate-x-40 translate-y-64 z-10">
-        <img src={space2} className="" alt="" />
+        <motion.img
+          variants={variants(0.4, 1, 6)}
+          animate="visible"
+          src={space2}
+          className=""
+          alt=""
+        />
       </div>
       <div className=" backdrop-blur-sm bg-purple-500/60 py-6 sm:pt-28   ">
         <div className="hidden absolute md:flex -top-full scale-50 md:scale-[0.4] transform -translate-x-48 translate-y-12 md:-translate-x-64 md:translate-y-14">
-          <img src={space} className="" alt="" />
+          <motion.img
+            variants={variants(0, 2, 10)}
+            animate="visible"
+            src={space}
+            className=""
+            alt=""
+          />
         </div>
 
         <div className="grid grid-cols-2  sm:grid-cols-none container mx-auto border-b-2 border-purple-300 px-2 lg:px-32 ">

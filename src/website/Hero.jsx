@@ -1,14 +1,39 @@
-import {  space3, space4 } from "../assets";
+import { space3, space4 } from "../assets";
 import Section from "../Components/Section";
-
+import { motion } from "framer-motion";
 const Hero = () => {
+  const variants = (delay) => ({
+    visible: {
+      y: [0, 10, 0],
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        repeatType: "loop",
+        ease: "easeInOut",
+        delay: delay,
+      },
+    },
+  });
   return (
     <Section id={"Home"} padding="pt-36 md:py-36" className={"relative  "}>
       <div className="hidden absolute md:flex  bottom-0   scale-[0.2] lg:scale-[0.4]  transform translate-x-[-278px] lg:-translate-x-72 translate-y-20 ">
-        <img src={space4} className="" alt="" />
+        <motion.img
+          animate="visible"
+          variants={variants(0.4)}
+          src={space4}
+          className=""
+          alt=""
+        />
       </div>
+
       <div className="hidden absolute md:flex  top-0 scale-[0.6]   lg:scale-[0.4]  transform translate-x-36 lg:translate-x-72 xl:translate-x-[417px] -translate-y-24  lg:-translate-y-64 ">
-        <img src={space3} className="" alt="" />
+        <motion.img
+          animate="visible"
+          variants={variants()}
+          src={space3}
+          className=""
+          alt=""
+        />
       </div>
       <div className=" hidden absolute lg:flex backdrop-blur-sm bg-gray-400 rounded-r-full transform xl:-translate-x-9  ">
         <ul className="flex flex-col justify-around bg  py-20 *:py-8 *:px-4 ">

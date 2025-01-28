@@ -3,6 +3,7 @@ import Contact from "./website/Contact";
 import Footer from "./website/Footer";
 import Header from "./website/Header";
 import Hero from "./website/Hero";
+
 import Work from "./website/Work";
 import "./website/website.css";
 
@@ -14,13 +15,13 @@ const App = () => {
         <Hero />
         <About />
         <Work />
+  
         <Contact />
 
-        <Footer/>
+        <Footer />
       </div>
     </>
   );
-
 };
 
 export default App;
