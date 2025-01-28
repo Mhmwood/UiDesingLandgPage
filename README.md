@@ -4,6 +4,7 @@ i built this website using:
 - React
 - Vite
 - Tailwind CSS
+- Frmor motion
 
 
 
